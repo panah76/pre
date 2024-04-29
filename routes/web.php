@@ -18,16 +18,29 @@ use App\Http\Controllers\PostController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/about', AboutController::class);
+Route::get('/about', AboutController::class)->name('about');
 
-Route::get('/contact',[ContactController::class , 'index']);
-Route::post('/contact',[ContactController::class , 'store']);
+Route::get('/contact',[ContactController::class , 'index'])->name('contact');
+Route::post('/contact',[ContactController::class , 'store'])->name('contact_post');
 
 Route::get('/course',[CourseController::class , 'index']);
 Route::post('/course',[CourseController::class , 'store']);
-Route::get('/single_course/{@slug}',[CourseController::class , 'show']);
+Route::get('/single_course/{$slug}',[CourseController::class , 'show']);
+
+Route::prefix('auth')->group(function () {
+    Route::get('/forget_password', function () {
+       return view('auth.forget_password');
+    });
+    Route::get('/login', function () {
+        return view('auth.login');
+    });
+    Route::get('/register', function () {
+        return view('auth.register');
+    })->name('register');
+
+});
 
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 Route::get('register', [UserController::class, 'create'])->middleware('guest');
