@@ -1,17 +1,8 @@
-/**
-* Template Name: Presento - v3.9.1
-* Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #0a0a0a;
-  background-color: #ded8d8;
+  background-color: #6c6969;
 }
 
 a {
@@ -79,7 +70,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #eee0e0;
+  background: #5e5b5b;
   transition: all 0.5s;
   z-index: 997;
   padding: 10px 0;
@@ -530,7 +521,7 @@ section {
 
 .section-bg:before {
   content: "";
-  background: #eae2e2;
+  background: #676464;
   position: absolute;
   bottom: 24px;
   top: -3px;
@@ -833,11 +824,11 @@ section {
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
-  margin-bottom: 20px;
-  padding: 30px;
-  border-radius: 6px;
-  background: #252525;
-  transition: 0.3s;
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 6px;
+    background: #0e0d0d;
+    transition: 0.3s;
 }
 
 .services .icon-box:hover {

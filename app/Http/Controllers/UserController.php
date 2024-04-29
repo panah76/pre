@@ -25,4 +25,10 @@ class UserController extends Controller
 
         return redirect('/')->with('success', 'Your account has been created.');
     }
+
+    public function login()
+    {
+        return view('users.login');
+    }
 }
+
